@@ -8,13 +8,15 @@ module.exports = {
         passName: 'defaultPass',
         gatherers: [
             'card-gatherer',
-            'api-gatherer'
+            'api-gatherer',
+            'api-response-gatherer'
         ]
     }],
 
     audits: [
         'card-audit',
-        'api-audit'
+        'api-audit',
+        'api-response-audit'
     ],
 
     categories: {
@@ -23,7 +25,8 @@ module.exports = {
             description: 'Metrics for the ratp timetable site',
             auditRefs: [
                 {id: 'card-audit', weight: 1},
-                {id: 'api-audit', weight: 1}
+                {id: 'api-audit', weight: 1},
+                {id: 'api-response-audit', weight: 1}
             ]
         }
     }
