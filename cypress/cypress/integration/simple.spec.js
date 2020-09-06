@@ -26,7 +26,7 @@ context('Login Tests', () => {
 
 context('Unsuccesfully creates test', () => {
   it('Checks for alert, not enough Gems and Category', () => {
-    cy.get('a[href*="/challenges/myChallenges"]', {timeout: 1000}).first().click();
+    cy.get(':nth-child(7) > .nav-link').click();
 
     cy.contains('Create Challenge', {timeout: 1000}).click();
     cy.wait(500);
