@@ -53,12 +53,22 @@ En este caso se puede observar la gran diferencia en tiempos de ejecución, en e
 
 Se puede considerar que las diferencias son insignificantes.
 
+## Protractor
+### Time
+![](/imagesReadme/GraficoComparativoProtractor.jpeg)
+Como se puede observar, la línea naranja está generalmente por encima de la línea azul, lo que nos indica que headless en general tiene un tiempo menor de ejecución que headful.
+
+### RAM Usage and CPU Usage
+![](/imagesReadme/HeadfulProtractor11.jpeg)
+![](/imagesReadme/HeadlessProtractor14.jpeg)
+A partir de las anteriores gráficas en el que la primera representa el comportamiento de Headful y Headless, respectivamente, se puede ver que en condiciones generales los recursos consumidos por Headful son mayores que los consumidos por Headless.
+
 # Preguntas
 
 ## ¿Qué tantos recursos se pueden ahorrar ejecutando las pruebas de manera headless?
 
-En el caso de puppeteer y cypress las ejecuciones no presentan grandes diferencias en cuanto a recursos físicos de la computadora, en todo caso las pruebas en modo headless usan menos recursos por tanto en caso de que sea necesario realizar varias instancias de la misma prueba el efecto sería mayor y si presentaría utilidad.
-En cuanto a el tiempo este es el recurso que más se ve optimizado llegando incluso a ser 5 veces más rápido lo que representa un turnaround mucho más veloz lo que aceleraría todo el proceso de desarrollo.
+En el caso de puppeteer y cypress las ejecuciones no presentan grandes diferencias en cuanto a recursos físicos de la computadora, en todo caso las pruebas en modo headless usan menos recursos por tanto en caso de que sea necesario realizar varias instancias de la misma prueba el efecto sería mayor y si presentaría utilidad. Similarmente, en el caso de protractor se tiene que headful consume generalmente una mayor cantidad de recursos que en la ejecución headless.
+En cuanto a el tiempo este es el recurso que más se ve optimizado llegando incluso a ser 5 veces más rápido lo que representa un turnaround mucho más veloz lo que aceleraría todo el proceso de desarrollo. Por otro lado, en el caso de protractor, los tiempos de ejecución son muy similares, la diferencia en las gráficas encontradas se encuentra un solo pico en el que el tiempo de alza es alrededor de 10 segundos que representaría un 30% más aproximadamente, sin embargo es un comportamiento inusual en las pruebas.
 
 ## ¿En qué casos cree que valdría la pena ejecutar sus pruebas de esta forma?
 
@@ -67,7 +77,8 @@ Como lo mencionamos en la respuesta anterior en el caso de que muchas pruebas se
 # Puntos a tener en cuenta
 
 - Para las mediciones se tomaron los puntos de mayor uso durante las ejecuciones.
-- Cypress de la manera headless graba un video, mientras este es decodificado y escrito en disco el uso de la CPU sube a +50%
+- Cypress de la manera headless graba un video, mientras este es decodificado y escrito en disco el uso de la CPU sube a +50%.
+- En el caso de protractor se realiza un script en el que se toman los tiempos de ejecución y se escribe un archivo txt que luego se convierte en csv manualmente. El archivo mencionado se encuentra en el e2e del proyecto con nombre runTestAutomatically.sh
 
 ![](/imagesReadme/video2.png)
 
