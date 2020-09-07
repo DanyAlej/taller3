@@ -55,12 +55,12 @@ Se puede considerar que las diferencias son insignificantes.
 
 ## Protractor
 ### Time
-![](/imagesReadme/GraficoComparativoProtractor.jpeg)
+![](/imagesReadme/GraficoComparativoProtractor.jpeg)<br>
 Como se puede observar, la línea naranja está generalmente por encima de la línea azul, lo que nos indica que headless en general tiene un tiempo menor de ejecución que headful.
 
 ### RAM Usage and CPU Usage
 ![](/imagesReadme/HeadfulProtractor11.jpeg)
-![](/imagesReadme/HeadlessProtractor14.jpeg)
+![](/imagesReadme/HeadlessProtractor14.jpeg)<br>
 A partir de las anteriores gráficas en el que la primera representa el comportamiento de Headful y Headless, respectivamente, se puede ver que en condiciones generales los recursos consumidos por Headful son mayores que los consumidos por Headless.
 
 # Preguntas
